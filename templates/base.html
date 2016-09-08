@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="{{ DEFAULT_LANG }}">
 <head>
+  {% if GOOGLE_ANALYTICS %}
+    {% include "partial/ga.html" %}
+  {% endif %}
+
   <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
 
   {% if USE_LESS %}
@@ -119,10 +123,6 @@
       {% endif %}
     </footer>
   </main>
-
-  {% if GOOGLE_ANALYTICS %}
-    {% include "partial/ga.html" %}
-  {% endif %}
 
   {% if GUAGES %}
     {% include "partial/guages.html" %}
